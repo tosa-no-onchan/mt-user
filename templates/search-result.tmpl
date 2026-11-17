@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title><TMPL_VAR NAME="page_title"></title>
+</head>
+<body>
+    <h1>検索結果</h1>
+    <!-- 検索キーワード または カテゴリーラベルの表示 -->
+    <TMPL_IF NAME="search_label">
+        <p>「<TMPL_VAR NAME="search_label">」の検索結果（全 <TMPL_VAR NAME="total_count"> 件）</p>
+    </TMPL_IF>
+
+    <!-- 実際の Blog 記事の一覧リスト -->
+    <div id="search-results">
+        <TMPL_IF NAME="entries">
+            <TMPL_LOOP NAME="entries">
+                <article class="entry-item">
+                    <h2><a href="<TMPL_VAR NAME="url">"><TMPL_VAR NAME="title"></a></h2><br />
+                    <span><TMPL_VAR NAME="author"></span> (<abbr class="published" title="<TMPL_VAR NAME="date">"><TMPL_VAR NAME="date"></abbr>)</span>
+
+                    <div class="excerpt"><TMPL_VAR NAME="excerpt"></div>
+                    <TMPL_IF NAME="text_more_lng">
+                    <div class="asset-more-link">
+                        続きを読む: <a href="<TMPL_VAR NAME="url">#more" rel="bookmark"><TMPL_VAR NAME="title"></a>
+                    </div>
+                    </TMPL_IF>
+                    <time><TMPL_VAR NAME="date"></time>
+                </article>
+            </TMPL_LOOP>
+        <TMPL_ELSE>
+            <p class="no-result">「<TMPL_VAR NAME="search_label">」に一致する記事は見つかりませんでした。</p>
+        </TMPL_IF>
+    </div>
+
+    <!-- 将来用のページャー領域 -->
+    <div class="pager">
+        <!-- ここにページネーション用の TMPL_LOOP を追加予定 -->
+        <TMPL_VAR NAME="pager">
+    </div>
+</body>
+</html>
+
