@@ -47,7 +47,18 @@ mt-cgi と併置して使います。
     ブラウザーから、実行する。  
     URL: http://www.xxx.com/cgi-bin/mt-user/my-search.cgi?search=&IncludeBlogs=1&limit=20  
 
-#### 5. 参照  
+#### 5. おまけ  
+  
+  mt orginal 向けの プラグインです。  
+  my-plugins-for-mt/plugins/SearchPager/SearchPager.pl  
+
+  テンプレートの Top index.html や、 category 用 index.html の下部に、ページャーを出して、 /cgi-bin/mt-user/my-search.cgi?xxx へのリンクを張る。  
+  
+  上記 my-plugins-for-mt/plugins/SearchPager/ のフォルダーを、  
+  cgi-bin/mt/plugins/ へコピーして下さい。  
+
+  
+#### 6. 参照  
 
   [Movable Type Free版 セキュリティー対策 Ubuntu 24.04 #2](https://www.netosa.com/blog/2026/11/movable-type-free-ubuntu-2404-2.html)  
 
