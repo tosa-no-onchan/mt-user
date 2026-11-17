@@ -70,6 +70,23 @@ mt-cgi と併置して使います。
 <$MTSearchPagerLinks$>
 ```
 
+2. カテゴリ別ブログ記事リスト への記述方法。
+```
+<mt:Entries limit="$limit">
+                            <mt:Ignore><!-- Use the Entry Summary module for each entry published on this page --></mt:Ignore>
+                            <$mt:Include module="ブログ記事の概要"$>
+</mt:Entries>
+
+
+                            <div class="content-nav">
+                                <mt:ArchivePrevious><a href="<$mt:ArchiveLink$>">&laquo; <$mt:ArchiveTitle$></a> |</mt:ArchivePrevious>
+                                <a href="<$mt:Link template="main_index"$>">メインページ</a> |
+                                <a href="<$mt:Link template="archive_index"$>">アーカイブ</a>
+                                <mt:ArchiveNext>| <a href="<$mt:ArchiveLink$>"><$mt:ArchiveTitle$> &raquo;</a></mt:ArchiveNext>
+                            </div>
+    <$MTSearchPagerLinks$><br />
+```   
+
   
 #### 6. 参照  
 
