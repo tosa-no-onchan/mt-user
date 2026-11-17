@@ -57,6 +57,19 @@ mt-cgi と併置して使います。
   上記 my-plugins-for-mt/plugins/SearchPager/ のフォルダーを、  
   cgi-bin/mt/plugins/ へコピーして下さい。  
 
+1. メインページ index.html への記述方法。  
+```
+<mt:Entries>
+
+                            <mt:Ignore><!-- Use the Entry Summary module for each entry published on this page --></mt:Ignore>
+                            <$mt:Include module="ブログ記事の概要"$>
+</mt:Entries>
+
+<!-- 💡これだけで、記事数に応じて自動計算されたCGIリンクがパッと出ます！ -->
+<!-- おすすめの書き方（MT4標準スタイル） -->
+<$MTSearchPagerLinks$>
+```
+
   
 #### 6. 参照  
 
