@@ -20,6 +20,8 @@ mt-cgi と併置して使います。
 
 #### 2. templates/category_navi.txt を作成  
   
+/blog/index.html の、左ナビのカテゴリー部分だけ、抽出します。  
+  
     extract.cgi の下記、パスを、自分の環境に合わせる。  
     my $in_file  = '../../html/blog/index.html';
     ブラウザーから、実行する。  
