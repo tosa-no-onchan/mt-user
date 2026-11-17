@@ -2,6 +2,14 @@
 Movable Type 2.4.x の mt/mt-search.cgi の代替 検索 CGI です。  
 SQLite3 版対応です。  
 Ubuntu 24.04 Perl と、 X-Server Perl で実行確認しています。  
+  
+mt-cgi と併置して使います。  
+
+```
+/cgi-bin/  
+  mt  
+  mt-user  
+```
 
 #### 1. インストール  
   
