@@ -70,7 +70,7 @@ mt-cgi と併置して使います。
 <$MTSearchPagerLinks$>
 ```
 
-2. カテゴリ別ブログ記事リスト への記述方法。
+2. カテゴリ別ブログ記事リスト category/sub-category/index.html への記述方法。
 ```
 <mt:Entries limit="$limit">
                             <mt:Ignore><!-- Use the Entry Summary module for each entry published on this page --></mt:Ignore>
