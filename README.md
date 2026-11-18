@@ -47,6 +47,9 @@ mt-cgi と併置して使います。
     ブラウザーから、実行する。  
     URL: http://www.xxx.com/cgi-bin/mt-user/my-search.cgi?search=&IncludeBlogs=1&limit=20  
 
+    注) search=% とすると、オリジナルは、全件検索だったけど、本当に % を検索に行きます。  
+    全件検索は、search= と、何も指定しないで!!  
+
 #### 5. おまけ  
   
   mt orginal 向けの プラグインです。  
