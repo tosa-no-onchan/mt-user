@@ -78,14 +78,14 @@ sub _hdlr_search_pager_links {
     my $search_s ="";
     for (my $offset = $limit; $offset < $total_entries; $offset += $limit) {
         $offs= $limit * ($page-1);
-        $search_s = "/cgi-bin/mt-user/my-search.cgi?search=%25&IncludeBlogs=".$blog_id."&limit=".$limit."&offset=".$offs . $cat_param;
+        $search_s = "/cgi-bin/mt-user/my-search.cgi?search=&IncludeBlogs=".$blog_id."&limit=".$limit."&offset=".$offs . $cat_param;
         $html .= qq|<a href="$search_s">$page</a>&nbsp;|;
         $page++;
     }
 
     # 「次 ＞」のリンク（常に2ページ目のoffsetを指定）
     $offs= $limit * 1;
-    $search_s = "/cgi-bin/mt-user/my-search.cgi?search=%25&IncludeBlogs=".$blog_id."&limit=".$limit."&offset=".$offs . $cat_param;
+    $search_s = "/cgi-bin/mt-user/my-search.cgi?search=&IncludeBlogs=".$blog_id."&limit=".$limit."&offset=".$offs . $cat_param;
     $html .= qq|<a href="$search_s" rel="next">次 &gt;</a>|;
     $html .= '</div>';
 
